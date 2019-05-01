@@ -69,6 +69,9 @@ ul {
 
 /* Reset style above, now for the page: */
 
+@mobile: ~"only screen and (max-width: 500px)";
+@tablet: ~"only screen and (max-width: 800px)";
+
 h1 {
 	font-size: 3.2rem;
 	font-weight: bold;
@@ -76,6 +79,8 @@ h1 {
 
 h2, .h2 {
 	font-size: 2.4rem;
+	font-weight: bold;
+	line-height: 2;
 }
 
 h3 {
@@ -85,6 +90,7 @@ h3 {
 br {
 	line-height: 2.8;
 }
+
 
 @bgcolor: #10077e;
 @link-color: #6e6e6e;
@@ -104,6 +110,7 @@ header {
 		display: flex;
 		justify-content: flex-end;
 		a {
+			display: inline-block;
 			color: @link-color;
 			box-sizing: border-box;
 			margin: 0 20px;
@@ -111,13 +118,24 @@ header {
 		a:hover {
 			color: white;
 		}
+		@media @tablet {
+			justify-content: space-around;
+		}
+		@media @mobile {
+			flex-direction: column;
+			a {
+				width: 100%;
+				text-align: center;
+			}
+		}
 	}
 }
 
-@title-card--color: #144A0C;
+@title-card--color: rgba(20, 74, 12, 0.9);
 @title-card--darker: darken(@title-card--color, 5%);
 
 .main-body {
+
 	.title-card {
 		background: @title-card--color;
 		padding: 2%;
@@ -126,7 +144,8 @@ header {
 		flex-flow: column;
 		justify-content: space-around;
 		width: 100%;
-		min-height: 300px;
+		min-height: 450px;
+
 		.button {
 			display: block;
 			max-width: 200px;
@@ -137,8 +156,77 @@ header {
 			border-radius: 10px;
 			transition: background .15s linear;
 		}
+
 		.button:hover {
 			background: white;
 		}
 	}
+
+	.container {
+		height: 1000px;
+		padding: 20px;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: flex-start;
+		align-content: space-between;
+		@media only screen and (max-width: 1300px) {
+			height: 1200px;
+		}
+		@media @tablet {
+			height: 100%;
+			flex-wrap: no-wrap;
+		}
+
+		#intro {
+			width: 45%;
+			height: 40%;
+			@media @tablet {
+				.card-tablet-size;
+			}
+		}
+
+		#skills {
+			width: 45%;
+			height: 40%;
+			@media @tablet {
+				.card-tablet-size;
+			}
+
+			ul {
+				padding: 10px;
+				margin: 10px 0;
+				border: 2px solid black;
+				list-style: circle;
+				list-style-position: inside;
+				line-height: 2.5;
+				a {
+					color: white;
+				}
+				a:hover {
+					color: #1BC902;
+				}
+			}
+		}
+
+		#reviews {
+			width: 45%;
+			section {
+				margin-top: 20px;
+			}
+			@media @tablet {
+				.card-tablet-size;
+			}
+		}
+	}
+}
+
+.card-tablet-size() {
+	width: 100%;
+	margin: 10px auto;
+	// border-bottom: 1px solid black;
+}
+
+
+footer {
+	margin: 20px;
 }

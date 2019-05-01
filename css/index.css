@@ -149,6 +149,8 @@ h1 {
 h2,
 .h2 {
   font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2;
 }
 h3 {
   font-size: 1.8rem;
@@ -171,6 +173,7 @@ header nav {
   justify-content: flex-end;
 }
 header nav a {
+  display: inline-block;
   color: #6e6e6e;
   box-sizing: border-box;
   margin: 0 20px;
@@ -178,20 +181,34 @@ header nav a {
 header nav a:hover {
   color: white;
 }
+@media only screen and (max-width: 800px) {
+  header nav {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+  }
+  header nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
 .main-body .title-card {
-  background: #144A0C;
+  background: rgba(20, 74, 12, 0.9);
   padding: 2%;
-  border: 1px solid #0e3408;
+  border: 1px solid rgba(14, 52, 8, 0.9);
   display: flex;
   flex-flow: column;
   justify-content: space-around;
   width: 100%;
-  min-height: 300px;
+  min-height: 450px;
 }
 .main-body .title-card .button {
   display: block;
   max-width: 200px;
-  background: #0e3408;
+  background: rgba(14, 52, 8, 0.9);
   color: black;
   padding: 10px;
   text-align: center;
@@ -200,4 +217,72 @@ header nav a:hover {
 }
 .main-body .title-card .button:hover {
   background: white;
+}
+.main-body .container {
+  height: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+@media only screen and (max-width: 1300px) {
+  .main-body .container {
+    height: 1200px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container {
+    height: 100%;
+    flex-wrap: no-wrap;
+  }
+}
+.main-body .container #intro {
+  width: 45%;
+  height: 40%;
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container #intro {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+.main-body .container #skills {
+  width: 45%;
+  height: 40%;
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container #skills {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+.main-body .container #skills ul {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid black;
+  list-style: circle;
+  list-style-position: inside;
+  line-height: 2.5;
+}
+.main-body .container #skills ul a {
+  color: white;
+}
+.main-body .container #skills ul a:hover {
+  color: #1BC902;
+}
+.main-body .container #reviews {
+  width: 45%;
+}
+.main-body .container #reviews section {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container #reviews {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+footer {
+  margin: 20px;
 }
