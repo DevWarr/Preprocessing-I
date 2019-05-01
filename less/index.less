@@ -230,11 +230,17 @@ header {
 			width: 45%;
 			height: 100%;
 			section {
-				margin-top: 20px;
-				border-bottom: 1px solid black;
+				margin: 0px;
+				padding: 10px;
+				border: 2px solid black;
+				border-bottom: 0px;
+				}
 				strong {
 					background: black;
 				}
+
+			section:last-of-type {
+				border-bottom: 2px solid black;
 			}
 			@media @tablet {
 				.card-tablet-size;
