@@ -234,17 +234,12 @@ header nav a:hover {
   background: white;
 }
 .main-body .container {
-  height: 1000px;
+  height: 100vh;
   padding: 20px;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
   align-content: space-between;
-}
-@media only screen and (max-width: 1300px) {
-  .main-body .container {
-    height: 1200px;
-  }
 }
 @media only screen and (max-width: 800px) {
   .main-body .container {
