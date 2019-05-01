@@ -142,17 +142,62 @@ ul {
   list-style: none;
 }
 /* Reset style above, now for the page: */
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+h2,
+.h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+br {
+  line-height: 2.8;
+}
 body {
   max-width: 1200px;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
+  background: #10077e;
+  line-height: 1.6;
+}
+header {
+  margin: 20px 1%;
 }
 header nav {
-  margin-top: 15px;
   display: flex;
   justify-content: flex-end;
 }
 header nav a {
+  color: #6e6e6e;
   box-sizing: border-box;
   margin: 0 20px;
+}
+header nav a:hover {
+  color: white;
+}
+.main-body .title-card {
+  background: #144A0C;
+  padding: 2%;
+  border: 1px solid #0e3408;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 300px;
+}
+.main-body .title-card .button {
+  display: block;
+  max-width: 200px;
+  background: #0e3408;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  transition: background 0.15s linear;
+}
+.main-body .title-card .button:hover {
+  background: white;
 }

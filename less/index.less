@@ -69,27 +69,76 @@ ul {
 
 /* Reset style above, now for the page: */
 
+h1 {
+	font-size: 3.2rem;
+	font-weight: bold;
+}
+
+h2, .h2 {
+	font-size: 2.4rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+br {
+	line-height: 2.8;
+}
+
 @bgcolor: #10077e;
+@link-color: #6e6e6e;
 
 body {
 	max-width: 1200px;
-	width: 100%;
+	width: 80%;
 	margin: 0 auto;
 	background: @bgcolor;
+	line-height: 1.6;
 }
 
 header {
+	margin: 20px 1%;
 	nav {
-		margin-top: 15px;
+		// margin-top: 15px;
 		display: flex;
 		justify-content: flex-end;
 		a {
-			color: 
+			color: @link-color;
 			box-sizing: border-box;
 			margin: 0 20px;
 		}
 		a:hover {
+			color: white;
+		}
+	}
+}
 
+@title-card--color: #144A0C;
+@title-card--darker: darken(@title-card--color, 5%);
+
+.main-body {
+	.title-card {
+		background: @title-card--color;
+		padding: 2%;
+		border: 1px solid @title-card--darker;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-around;
+		width: 100%;
+		min-height: 300px;
+		.button {
+			display: block;
+			max-width: 200px;
+			background: @title-card--darker;
+			color: black;
+			padding: 10px;
+			text-align: center;
+			border-radius: 10px;
+			transition: background .15s linear;
+		}
+		.button:hover {
+			background: white;
 		}
 	}
 }
