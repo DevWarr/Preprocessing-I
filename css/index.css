@@ -1,1 +1,309 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Gugi', cursive;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/* Reset style above, now for the page: */
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+h2,
+.h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2;
+}
+h3 {
+  font-size: 1.8rem;
+}
+br {
+  line-height: 2.8;
+}
+emphasis {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+body {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  background-image: image("img/bg.png");
+  background: #10077e;
+  line-height: 1.6;
+}
+header {
+  margin: 20px 1%;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav a {
+  display: inline-block;
+  color: #6e6e6e;
+  box-sizing: border-box;
+  margin: 0 20px;
+}
+header nav a:hover {
+  color: white;
+}
+@media only screen and (max-width: 800px) {
+  header nav {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+  }
+  header nav a {
+    background: black;
+    padding: 2px 0;
+    margin: 3px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.main-body img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+}
+.main-body .title-card {
+  background: rgba(20, 74, 12, 0.8);
+  padding: 2%;
+  border: 1px solid rgba(14, 52, 8, 0.8);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 300px;
+}
+.main-body .title-card .button {
+  display: block;
+  max-width: 200px;
+  background: rgba(14, 52, 8, 0.8);
+  color: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  transition: background 0.15s linear;
+}
+.main-body .title-card .button:hover {
+  background: white;
+}
+.main-body .container {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container {
+    height: 100%;
+    flex-wrap: no-wrap;
+  }
+}
+.main-body .container #intro {
+  width: 45%;
+  height: 40%;
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container #intro {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+.main-body .container #skills {
+  width: 45%;
+  height: 40%;
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container #skills {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+.main-body .container #skills ul {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid black;
+  list-style: circle;
+  list-style-position: inside;
+  line-height: 2.5;
+}
+.main-body .container #skills ul a {
+  color: white;
+}
+.main-body .container #skills ul a:hover {
+  color: #1BC902;
+}
+.main-body .container #reviews {
+  width: 45%;
+  height: 100%;
+}
+.main-body .container #reviews section {
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid black;
+  border-bottom: 0px;
+}
+.main-body .container #reviews strong {
+  background: black;
+}
+.main-body .container #reviews section:last-of-type {
+  border-bottom: 2px solid black;
+}
+@media only screen and (max-width: 800px) {
+  .main-body .container #reviews {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+/* mixin */
+footer {
+  margin: 20px;
+}
